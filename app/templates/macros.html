@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<!-- Display Sources -->
+{% macro displaySourcesArray(Sources) %}
+{% for source in Sources %}
+<div class="col-md-3 single-source">
+    <div class="row">
+        <h2><a href="{{Source.url}}"></a><strong>{{ Source.name}}</strong></h2>
+        <h2>{{Source.category.upper()}}</h2>
+        <h2>{{Source.country}}</h2>
+    </div>
+
+    <div class="row">
+        <p><strong>{{ source.description|truncate(150)}}</strong></p>
+    </div>
+{% endfor %}
+{% endmacro %}
+
+<!-- Display News -->
+{% macro displayNewsArray(news_array) %}
+{% for news in news_array %}
+<!-- {% for id in News %} -->
+<div class="col-md-3 single-source">
+    <div class="row">
+        <h2><a href="{{news.url}}"></a><strong>{{ News.title}}</strong></h2>
+        <h2>{{News.author}}</h2>
+        <a href="{{ news.url }}"> Enter...</a>
+        <img src='{{news.urlToImage}}' width="" height="" class="img-responsive">
+        
+    </div>
+
+    <div class="row">
+        <h2>{{News.description|truncate(60)}}</h2>
+        <p><strong> Date: {{ News.publishedAt[:10])}}</strong></p>
+    </div>
+{% endfor %}
+{% endmacro %}
+
+{% macro addMore() %} 
+{% endmacro%}

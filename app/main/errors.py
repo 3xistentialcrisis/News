@@ -6,4 +6,4 @@ def four_zero_four(error):
     '''
     This Function renders the 404 error page
     '''
-    return render_template('404.html'),404
+    return render_template('404-error.html'),404

@@ -18,9 +18,6 @@ class SourcesTest(unittest.TestCase):
 
     
     def test_init(self):
-        '''
-        Test if the Sources Class is initialised
-        '''
 
         self.assertEqual(self.new_source.id,'quartz')
         self.assertEqual(self.new_source.name,'QuartzNews')

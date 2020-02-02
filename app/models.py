@@ -1,6 +1,6 @@
 class News:
     '''
-    News class that defines the news articles object
+    News class which defines the news articles object
     '''
 
     def __init__(self, author, title, description, urlToImage, url, publishedAt):
@@ -13,7 +13,7 @@ class News:
 
 class Sources:
     '''
-    Sources class that defines the news sources object
+    Sources class which defines the news sources object
     '''
 
     def __init__(self, id, name, description, category, country, url):

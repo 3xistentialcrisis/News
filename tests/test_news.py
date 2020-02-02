@@ -18,9 +18,6 @@ class NewsTest(unittest.TestCase):
         self.assertTrue(isinstance(self.new_news,News))
     
     def test_init(self):
-        '''
-        Check if the News Class is initialised
-        '''
 
         self.assertEqual(self.new_news.author,'BuzzfeedNews')
         self.assertEqual(self.new_news.title,'A Pro-Trump Blog Doxed A Chinese Scientist It Falsely Accused Of Creating The Coronavirus As A Bioweapon')
@@ -32,4 +29,4 @@ class NewsTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    unittest.main()

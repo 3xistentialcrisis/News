@@ -64,6 +64,9 @@ $ python3.8 test_news.py
 # Known Bugs
 There are no known bugs at the time of its creation.
 
+# Code Beat
+[![codebeat badge](https://codebeat.co/badges/61881488-2da3-4522-be01-0226f8d1a6c6)](https://codebeat.co/projects/github-com-3xistentialcrisis-news-master)
+
 # Contact Information 
 To get more help email the Administrator at admin@news.com
 

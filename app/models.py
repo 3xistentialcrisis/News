@@ -15,6 +15,7 @@ class Sources:
     '''
     Sources class which defines the news sources object
     '''
+#instantiate
 
     def __init__(self, id, name, description, category, country, url):
         self.id = id

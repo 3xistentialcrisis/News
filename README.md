@@ -29,13 +29,14 @@ https://github.com/
 # Installation Requirements
 1. Ensure that you have Github Account:
 
-2. Follow this link to the Password Locker Application Github Repository:
+2. Follow this link to the News Aggregator Application Github Repository:
 
+https://github.com/3xistentialcrisis/News
 
 
 3. Clone the repository on your computer by running the following command in your terminal:
 
-
+https://github.com/3xistentialcrisis/News.git
 
 4. Run the project in your terminal & run the python shell by running the following command in your terminal:
 
@@ -53,9 +54,9 @@ This application enables its users to:
 # Test Driven Development (TDD)
 To test this application, run this commands in the terminal;
 
-$ python3.8 .py
+$ python3.8 test_news.py 
 
-$ python3.8 .py
+$ python3.8 test_news.py
 
 # Known Bugs
 There are no known bugs at the time of its creation.

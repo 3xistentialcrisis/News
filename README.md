@@ -4,7 +4,9 @@ By: Wanjiku Karanja
 
 # Description 
 This is an application that lists and previews news articles from various sources. 
+Access this application at the following link:
 
+https://ur-news-today.herokuapp.com/
 
 # Technologies Used
 This application was built through:
@@ -41,6 +43,7 @@ https://github.com/3xistentialcrisis/News.git
 4. Run the project in your terminal & run the python shell by running the following command in your terminal:
 
 $python3.8 
+
 
 # Features
 This application enables its users to:

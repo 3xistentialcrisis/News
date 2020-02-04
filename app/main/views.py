@@ -12,5 +12,5 @@ def index():
     title = 'Home || Welcome to your Daily News Aggregator'
 
     
-    news = get_sources('sources')
-    return render_template('index.html', title=title, sources= news)
+    news = get_news(id)
+    return render_template('index.html', title=title, sources= Sources, news= news)

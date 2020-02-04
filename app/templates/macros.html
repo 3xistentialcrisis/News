@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
 <!-- Display Sources -->
-{% macro displaySourcesArray(Sources) %}
+{% macro displaySourcesArray(sources_array) %}
 {% for source in Sources %}
 <div class="col-md-3 single-source">
     <div class="row">
-        <h2><a href="{{Source.url}}"></a><strong>{{ Source.name}}</strong></h2>
-        <h2>{{Source.category.upper()}}</h2>
-        <h2>{{Source.country}}</h2>
+        <h2><a href="{{Sources.url}}"></a><strong>{{ Sources.name}}</strong></h2>
+        <h2>{{Sources.category.upper()}}</h2>
+        <h2>{{Sources.country}}</h2>
     </div>
 
     <div class="row">
-        <p><strong>{{ source.description|truncate(150)}}</strong></p>
+        <p><strong>{{ sources.description|truncate(150)}}</strong></p>
     </div>
 {% endfor %}
 {% endmacro %}

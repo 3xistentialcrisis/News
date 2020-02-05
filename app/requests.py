@@ -22,7 +22,6 @@ def get_news(id):
     This function retrieves the news articles from their source
     """
     get_news_link = 'https://newsapi.org/v2/top-headlines?sources?&apiKey={}'.format(api_key)
-    # get_news_link = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=3540aa7416f144918cf919d37f574a5c'
 
     with urllib.request.urlopen(get_news_link) as url:
         get_news_data = url.read()
@@ -66,9 +65,8 @@ def get_sources():
     '''
 
     get_sources_link = 'https://newsapi.org/v2/sources?&apiKey={}'.format(api_key)
-    # get_sources_link = 'https://newsapi.org/v2/sources?apiKey=3540aa7416f144918cf919d37f574a5c'
 
-    print(get_sources_link)
+    # print(get_sources_link)
 
     with urllib.request.urlopen(get_sources_link) as url:
         get_sources_data = url.read()
@@ -84,9 +82,9 @@ def get_sources():
 
 # Process Sources
 def process_results(sources_array):
-    '''
+    """
     This Function  processes and transforms sources into a objects list
-    '''
+    """
     # sources object
     sources_results = []
     for source_item in sources_array:

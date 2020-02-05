@@ -24,16 +24,16 @@
                     {% for news in news_array %}
                     <div class="col-md-3 single-source">
                     <div class="row">
-                        <h2><a href="{{news.url}}"></a><strong>{{ News.title}}</strong></h2>
-                        <h2>{{News.author}}</h2>
+                        <h2><a href="{{news.url}}"></a><strong>{{ news.title}}</strong></h2>
+                        <h2>{{news.author}}</h2>
                         <a href="{{ news.url }}"> Enter...</a>
                         <img src='{{news.urlToImage}}' width="" height="" class="img-responsive">
 
                     </div>
 
                     <div class="row">
-                        <h2>{{News.description|truncate(60)}}</h2>
-                        <p><strong> Date: {{ News.publishedAt[:10]}}</strong></p>
+                        <h2>{{news.description|truncate(60)}}</h2>
+                        <p><strong> Date: {{ news.publishedAt[:10]}}</strong></p>
                     </div>
                     </div>
                     {% endfor %}

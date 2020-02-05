@@ -1,7 +1,8 @@
 import urllib.request
 import json
 from .models import News,Sources
-# from newsapi import NewsApiClient
+
+
 
 #Get the API key
 api_key = None
@@ -20,7 +21,8 @@ def get_news(id):
     '''
     This function retrieves the news articles from their source
     '''
-    get_news_link = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'.format(id,api_key)
+    # get_news_link = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'.format(id,api_key)
+    get_news_link = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=3540aa7416f144918cf919d37f574a5c'
    
 
     with urllib.request.urlopen(get_news_link) as url:
@@ -63,7 +65,8 @@ def get_sources(source):
     This Function gets news sources from the News API
     '''
 
-    get_sources_link = 'https://newsapi.org/v2/sources={}&apiKey={}'.format(source,api_key)
+    # get_sources_link = 'https://newsapi.org/v2/sources={}&apiKey={}'.format(source,api_key)
+    get_sources_link = 'https://newsapi.org/v2/sources?apiKey=3540aa7416f144918cf919d37f574a5c'
 
     print(get_sources_link)
     

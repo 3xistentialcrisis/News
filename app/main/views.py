@@ -9,8 +9,6 @@ def index():
     This function returns the application index page
     '''
 
-    title = 'Home || Welcome to your Daily News Aggregator'
-
-    news_sources  = get_sources('source')
-    return render_template('index.html', title=title, source= news_sources)
+    news_sources = get_sources()
+    return render_template('index.html',  sources= news_sources)
 

@@ -1,27 +1,32 @@
-
+{% extends 'bootstrap/base.html'%}
 <!-- Display Sources -->
 {% macro displaySourcesArray(sources_array) %}
         {% for source in sources_array %}
-        <div class="">
-            <div class="row">
-                <h2><a href="{{source.url}}"></a><strong>{{ source.name}}</strong></h2>
-                <h2>{{source.category.upper()}}</h2>
-                <h2>{{source.country}}</h2>
-            </div>
 
-            <div class="row">
-                <p><strong>{{ source.description|truncate(150)}}</strong></p>
-            </div>
-        </div>
+<div class="card" style="width: 58rem;">
+  <div class="card-body">
+    <h5 class="card-title"><a href="/news/{{source.id}}"><strong>{{ source.name}}</strong></a></h5>
+      <p class="card-text">{{source.category.upper()}}</p>
+      <p class="card-text">{{source.country}}</p>
+    <p class="card-text">{{ source.description|truncate(150)}}</p>
+      <a href="/news/{{source.id}}" class="btn btn-outline-success">View Articles</a>
+  </div>
+</div>
+<style>
+    .card{
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+    padding: 40px;
+    margin:10px;
+    margin-top: 70px;
+    }
+</style>
         {% endfor %}
 {%endmacro%}
 
 {% macro displayNewsArray(news_array) %}
-        <!-- Display News -->
-
-                <!-- {% for id in News %} -->
-
                     {% for news in news_array %}
+                    <div class="card">
                     <div class="col-md-3 single-source">
                     <div class="row">
                         <h2><a href="{{news.url}}"></a><strong>{{ news.title}}</strong></h2>
@@ -36,8 +41,8 @@
                         <p><strong> Date: {{ news.publishedAt[:10]}}</strong></p>
                     </div>
                     </div>
+                    </div>
                     {% endfor %}
-{%endfor%}
 {%endmacro%}
 
 

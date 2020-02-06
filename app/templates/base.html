@@ -1,5 +1,5 @@
 {% extends 'bootstrap/base.html'%}
-<html>
+
     <head>
         {% block styles %} 
         {{ super() }}
@@ -14,12 +14,10 @@
 
         {% block content %} 
         {% endblock %}
-    </body>
 
     {% block scripts %}
     {{super()}}
     <script src="{{url_for('static',filename='js/bootstrap.bundle.min.js')}}"></script>
     {% endblock %}
-
-</html>
+</body>
 

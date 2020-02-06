@@ -12,13 +12,19 @@
       <a href="/news/{{source.id}}" class="btn btn-outline-success">View Articles</a>
   </div>
 </div>
+
 <style>
     .card{
     border-bottom: 3px solid black;
     border-right: 3px solid black;
     padding: 40px;
-    margin:10px;
+    margin-left:240px;
     margin-top: 70px;
+    font-size: x-large;
+    }
+
+    .card-title{
+    font-size: xx-large;
     }
 </style>
         {% endfor %}
@@ -29,19 +35,31 @@
                     <div class="card">
                     <div class="col-md-3 single-source">
                     <div class="row">
-                        <h2><a href="{{news.url}}"></a><strong>{{ news.title}}</strong></h2>
-                        <h2>{{news.author}}</h2>
-                        <a href="{{ news.url }}"> Enter...</a>
                         <img src='{{news.urlToImage}}' width="" height="" class="img-responsive">
+                        <h2 class="card-title"><a href="{{news.url}}"></a><strong>{{ news.title}}</strong></h2>
+                        <h2 class="card-text">{{news.author}}</h2>
+
 
                     </div>
 
                     <div class="row">
-                        <h2>{{news.description|truncate(60)}}</h2>
-                        <p><strong> Date: {{ news.publishedAt[:10]}}</strong></p>
+                        <h2 class="card-text">{{news.description|truncate(60)}}</h2>
+                        <p class="card-text"><strong> Date: {{ news.publishedAt[:10]}}</strong></p>
+                        <a class="card-text" href="{{ news.url }}"> Enter...</a>
                     </div>
                     </div>
                     </div>
+
+<style>
+    .card-title{
+    font-size: xx-large;
+    }
+
+    .card-text{
+    font-size: large;
+</style>
+
+
                     {% endfor %}
 {%endmacro%}
 

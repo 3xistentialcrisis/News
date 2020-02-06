@@ -21,4 +21,4 @@ def news(source_id):
     """
 
     articles_sources = get_news(source_id)
-    return render_template('news.html', articles_sources=articles_sources)
+    return render_template('index.html', articles_sources=articles_sources, name=source_id)

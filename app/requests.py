@@ -21,7 +21,7 @@ def get_news(id):
     """
     This function retrieves the news articles from their source
     """
-    get_news_link = 'https://newsapi.org/v2/top-headlines?sources?&apiKey={}'.format(api_key)
+    get_news_link = 'https://newsapi.org/v2/top-headlines?&apiKey={}'.format(api_key)
 
     with urllib.request.urlopen(get_news_link) as url:
         get_news_data = url.read()
